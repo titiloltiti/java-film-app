@@ -1,0 +1,89 @@
+<main role="main">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col col-12" style="padding: 20px;">
+                <div class="card mb-3">
+                    <h3 class="card-header">{{film.titre}}</h3>
+                    <div class="card-body">
+                        <h5 class="card-title">ID : {{film.id}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Synopsis : Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Praesent sed ante nec felis sagittis vulputate. Orci varius natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. Curabitur semper metus augue, non maximus metus
+                            laoreet laoreet. Aenean rutrum gravida velit, eget ullamcorper odio tincidunt id. In massa
+                            sem, pharetra eu semper vitae, condimentum nec velit. In fermentum accumsan risus sed
+                            fringilla. Nulla accumsan lacus augue, vel commodo ex consequat non. Donec odio sapien,
+                            congue nec justo eget, tempor tempus eros. Aliquam erat volutpat. Aenean finibus consequat
+                            metus id vehicula. Nulla eleifend ante enim, ac euismod arcu vulputate et. Fusce mattis
+                            tellus eget nulla fermentum fringilla. Nullam bibendum dui et auctor dictum. </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{{'films-det.DUR' | translate}} : {{film.duration}}</li>
+                        <li class="list-group-item">{{'films-det.DIR' | translate}} : {{film.realisateurName}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <button type=button class="btn btn-success" (click)="clickShowForm()" ng-show="!showForm">{{'films-det.MAJ' | translate}}</button>
+                        <button type=button class="btn btn-outline-warning" (click)="deleteFilm()">{{'films-det.DEL' | translate}}</button>
+                    </div>
+                    <div class="col col-12" style="padding: 20px;" *ngIf="showForm">
+                        <div *ngIf="updateForm.submitted" class="alert alert-info">
+                            Form submitted
+                        </div>
+                        <form #updateForm="ngForm" (ngSubmit)="processUpdateForm(updateForm)">
+                            <fieldset>
+                                <legend>{{'films-det.MAJ' | translate}}</legend>
+                                <div class="form-group row">
+                                    <div class="col col-sm-6">
+                                        <label for="titre" class="col-sm-2 col-form-label">Titre</label>
+                                        <input id="titre" type="text" name="titre" class="form-control"
+                                            placeholder="Enter titre" #posterTitre="ngModel" ngModel required>
+                                        <div *ngIf="posterTitre.invalid && (posterTitre.touched || posterTitre.dirty)">
+                                            <div *ngIf="posterTitre.errors.required" class="alert alert-danger">
+                                                {{'films.form.TITREQ' | translate}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+
+                                        <label for="duration" class="col-sm-4 col-form-label"> {{'films-det.DUR' | translate}} (min)</label>
+                                        <input id="duration" type="text" placeholder="Enter duration" name="duration"
+                                            class="form-control" #posterDuration="ngModel" ngModel required>
+                                        <div
+                                            *ngIf="posterDuration.invalid && (posterDuration.touched || posterDuration.dirty)">
+                                            <div *ngIf="posterDuration.errors.required" class="alert alert-danger">
+                                                {{'films.form.DURREQ' | translate}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+
+                                    <div class="col  col-12">
+                                        <label for="selected_real" class="col-sm-8 col-form-label"> {{'films.form.REAL' | translate}}</label>
+                                        <div class="select">
+                                            <select class="form-control" id="selected_real" name="selected_real"
+                                                [(ngModel)]="selected_real" #selectedReal required>
+                                                <option *ngFor="let realisateur of realisateurs"
+                                                    [ngValue]='realisateur'>
+                                                    {{realisateur.prenom}} {{realisateur.nom}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn btn-group">
+                                    <button class="btn btn-success" [disabled]="updateForm.invalid" type="submit"> {{'films-det.UPDATE' | translate}}</button>
+                                    <button class="btn btn-outline-primary" type="reset"
+                                        (click)="clickHideForm()">{{'films.form.CANCEL' | translate}}</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-primary" (click)="btnClick();">
+                        {{'films-det.OTHER' | translate}}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

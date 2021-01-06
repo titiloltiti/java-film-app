@@ -1,0 +1,66 @@
+{
+    "header": {
+        "PROJECT": "2020 ENSTA Project",
+        "HOME": "Home",
+        "REALS": "Directors"
+    },
+    "reals": {
+        "REALS": "Directors",
+        "NAME": "Name",
+        "FIRSTNAME": "First Name",
+        "DATE": "Birthday",
+        "DET": "Details",
+        "form": {
+            "ADDD": "Add a director",
+            "FNREQ": "First Name required",
+            "NREQ": "Name required",
+            "DREQ": "Birthday required",
+            "ADD": "Add",
+            "CANCEL": "Cancel"
+        }
+    },
+    "reals-det": {
+        "BIO": "Biography",
+        "FILMO": "Films",
+        "MAJ": "Update this director",
+        "DEL": "Delete this director",
+        "UPDATE": "Update",
+        "OTHER": "See other directors"
+    },
+    "films": {
+        "TIT": "Title",
+        "ORDER": "Order by",
+        "SIZE": "Page size",
+        "NON": "No element matching your research was found.",
+        "form": {
+            "ADDF": "Add a film",
+            "TITREQ": "Title Required",
+            "DURREQ": "Duration Required",
+            "REAL": "Director Name",
+            "ADD": "Add",
+            "CANCEL": "Cancel",
+            "FIL": "Filter",
+            "ALL": "All films"
+        }
+    },
+    "films-det": {
+        "DUR": "Film duration",
+        "DIR": "Director",
+        "MAJ": "Update this film",
+        "DEL": "Delete this film",
+        "UPDATE": "Update",
+        "OTHER": "See other films"
+    },
+    "footer": {
+        "FE1": "This is the footer of this application",
+        "FE2": "This app is a project that was conducted by Quentin Biharé during his 3rd year at ENSTA Paris",
+        "FE3": "This project aimed at building an application with both a front-end and a back-end running and interacting"
+    },
+    "dashboard": {
+        "TXT1": "Welcome!",
+        "TXT2": "This application has been developped by Quentin Biharé during his third year at ENSTA Paris",
+        "TXT3": "It exposes a films and directors database as well as an API to interact with. You may see much more right below!",
+        "FILMS": "See Films",
+        "REALS": "See Directors"
+    }
+}

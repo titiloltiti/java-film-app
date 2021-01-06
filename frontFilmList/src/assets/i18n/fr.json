@@ -1,0 +1,66 @@
+{
+    "header": {
+        "PROJECT": "Projet ENSTA 2020",
+        "HOME": "Acceuil",
+        "REALS": "Realisateurs"
+    },
+    "reals": {
+        "REALS": "Réalisateurs",
+        "NAME": "Nom",
+        "FIRSTNAME": "Prénom",
+        "DATE": "Date de naissance",
+        "DET": "Détails",
+        "form": {
+            "ADDD": "Ajouter un réalisateur",
+            "FNREQ": "Prénom requis",
+            "NREQ": "Nom requis",
+            "DREQ": "Date de naissance requise",
+            "ADD": "Ajouter",
+            "CANCEL": "Annuler"
+        }
+    },
+    "reals-det": {
+        "BIO": "Biographie",
+        "FILMO": "Filmographie",
+        "MAJ": "Mettre à jour ce realisateur",
+        "DEL": "Supprimer ce realisateur",
+        "UPDATE": "Mettre à jour",
+        "OTHER": "Voir les autres réalisateurs"
+    },
+    "films": {
+        "TIT": "Titre",
+        "ORDER": "Trier par",
+        "SIZE": "Taille de page",
+        "NON": "Aucun élément ne correspond à votre recherche.",
+        "form": {
+            "ADDF": "Ajouter un film",
+            "TITREQ": "Titre Requis",
+            "DURREQ": "Durée Requise",
+            "REAL": "Nom du réalisateur",
+            "ADD": "Ajouter",
+            "CANCEL": "Annuler",
+            "FIL": "Filtrer",
+            "ALL": "Tous les films"
+        }
+    },
+    "films-det": {
+        "DUR": "Durée du film",
+        "DIR": "Réalisateur",
+        "MAJ": "Mettre à jour ce film",
+        "DEL": "Supprimer ce film",
+        "UPDATE": "Mettre à jour",
+        "OTHER": "Voir les autres films"
+    },
+    "footer": {
+        "FE1": "Ceci est le footer de cette application",
+        "FE2": "Cette application a été développée par Quentin Biharé pendant sa troisième année à l'ENSTA Paris",
+        "FE3": "Ce projet consistait en la mise en place d'une application avec un front et un back qui tournent en parallèle et échangent"
+    },
+    "dashboard": {
+        "TXT1": "Bienvenue!",
+        "TXT2": "Cette application a été developpée par Quentin Biharé lors de sa 3eme année d'école à l'ENSTA Paris",
+        "TXT3": "Elle expose une base de données de films et de réalisateurs ainsi qu'une API pour intéragir avec cette base. Vous pouvez en voir plus ci-dessous!",
+        "FILMS": "Voir Films",
+        "REALS": "Voir Réalisateurs"
+    }
+}
