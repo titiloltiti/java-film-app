@@ -28,4 +28,4 @@ Ouvrir un navigateur à l'url ```http://localhost:4200/```
 - [ ] Ajout des Genres
 - [ ] Mise en place de Sonar
 - [x] Traduction
-- [ ] Tests
+- [x] Tests du FilmService
